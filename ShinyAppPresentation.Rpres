@@ -1,0 +1,41 @@
+Shiny App Project Presentation
+========================================================
+author: DSLearner12
+date: March 10, 2019
+autosize: true
+
+Overview
+========================================================
+
+The of this app is to help the user the mtcars data
+- The user is shown a list of the columns to choose from
+- The app takes the chosen column, calculates the number of bins to show
+- The app displays a histogram of the data for that column
+
+Summary of mtcars Data
+========================================================
+
+```{r}
+summary(mtcars)
+```
+
+Example output for mpg
+========================================================
+
+```{r}
+        n<-"mpg"
+        x    <- mtcars[,names(mtcars)==n] 
+        bins<-        seq(min(x), max(x), length.out = 30 + 1)
+        hist(x, breaks = bins, col = 'darkgray', border = 'white',main = paste("histogram of ",n),xlab=n)
+
+```
+
+Where can I find it?
+========================================================
+  
+The ShinyApp can be found here:  
+  
+https://dslearner12.shinyapps.io/DDPShinyProject/
+  
+The github repository can be found here:
+http://github.com/dslearner12/DDPProj/tree/shinyapp/
