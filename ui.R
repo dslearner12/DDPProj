@@ -20,7 +20,7 @@ shinyUI(fluidPage(
     sidebarPanel(
             selectInput(
                     "column",
-                    label = h3("Select a Column"),
+                    label = h4("Select a Column in the mtcars data. A histogram will then be plotted for it."),
                     choices = names(mtcars)
             )
     ),
